@@ -1,8 +1,5 @@
 const axios = require("axios");
-// W112AQ
-// W112AW
-// NE301DP
-//BA100EP -- No restaurants nearby
+
 exports.getNearbyPlaces = async (req, res, next) => {
   const zipCode = req.params.zipcode;
   await axios
