@@ -2,8 +2,8 @@ const express = require("express");
 const placesRoute = require("./routes/places_route");
 
 const app = express();
-app.use(express.json());
 
+app.use(express.json());
 app.use("/api", placesRoute);
 
 const PORT = process.env.PORT || 3000;

@@ -1,8 +1,9 @@
 const express = require("express");
 
-const router = express.Router();
-const placesController = require("../controllers/nearby_places");
+const { getNearbyPlaces } = require("../controllers/nearby_places");
 
-router.route("/getNearby/:zipcode").get(placesController.getNearbyPlaces);
+const router = express.Router();
+
+router.get("/getNearby/:zipcode", getNearbyPlaces);
 
 module.exports = router;
